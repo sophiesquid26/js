@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+#calculator {
+    --width: 384;
+    --unit: cal(var(--width) / 4);
+    --btn-gap: 6px;
+    --btn-size: cal(var(--width) - var(--btn-gap)*3 / 4)
+    width: var(--width);
+    font-size: 18;
+
+}
+
+#calculator #screen {
+    text-align: right;
+    font-size: 6rem;
+}
+
+#calculator #keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, var(--btn-size));
+    grid-auto-rows: var(--unit);
+    
+}
+
+#calculator #keyboard button {
+    background: #333333;
+    color: #fff;
+}
+
+button {
+    border-radius: var(--unit);
+    font-size: 1.5rem;
+}
+
+button.side-btn {
+    background: darkgoldenrod
+}
+
+button.span-2 {
+    grid-column: span 2;
+}
