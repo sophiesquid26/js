@@ -33,24 +33,24 @@ function calculate() {
     let result 
 
     // notes:
-    // variable = __
-    // 1 == "1"
-    // if(__ = __)
+    // variable = __  <- let variable
+    // 1 == "1"       <- check if they are the same, despite type
+    // if(__ === __)  <- check if they are the same content and type
 
     if(op === "+") {
-        result = aVal + bval 
+        result = aVal + bVal 
     }
     
     if(op === "-") {
-        result = aVal - bval 
+        result = aVal - bVal 
     }
 
     if(op === "*") {
-        result = aVal * bval 
+        result = aVal * bVal 
     }
     
     if(op === "/") {
-        result = aVal / bval 
+        result = aVal / bVal 
     }
 
     resultSpan.innertext = result
