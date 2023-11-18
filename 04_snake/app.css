@@ -1,0 +1,43 @@
+#playground {
+    --width: 200px;
+    --height: 400px;
+    --default-color: #eee;
+    --hightlight-color: #333;
+    --food-color: red;
+    
+    border: 1px solid var(--default-color);
+
+    width: var(--width);
+    height: var(--height);
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    box-sizing: border-box;
+    border: 1px solid var(--default-color);
+    position: relative;
+}
+
+.cell::before {
+    content: " ";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    background: var(--default-color);
+}
+
+.cell.has-snake {
+    border: 1px solid var(--highlight-color);
+}
+
+.cell.cell.has-snake::before{
+    background: var(--highlight-color);
+}
+
+.cell.has-food {
+    border: 1px solid var(--food-color);
+}
